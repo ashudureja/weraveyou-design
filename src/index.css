@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --color-accent: #d6ff62;
+  --color-light: #fff;
+  --color-dark: #1d1d1d;
+  --color-bg: #020617;
+  --color-darkblack: #000310;
+  --color-lightblack: #020617;
+
+  --background: #dddbd7;
+  --foreground: #ff1b00;
+    --neon: #a2ff63;
+     --prpl: #6840ff;
+  --main: #eeeef3;
+  --blk: #131213;
+  --wht: #eaeaea;
+  --shadow-brand: -82px 54px 27px 0px rgba(0,0,0,0.01),
+  -52px 35px 25px 0px rgba(0,0,0,0.04),
+  -29px 19px 21px 0px rgba(0,0,0,0.15),
+  -13px 9px 16px 0px rgba(0,0,0,0.25),
+  -3px 2px 9px 0px rgba(0,0,0,0.29);
+  --shadow-border: 0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08);
+  --shadow-depth: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  --shadow-depth2: 0px 4px 16px rgba(17,17,26,0.1), 0px 8px 24px rgba(17,17,26,0.1), 0px 16px 56px rgba(17,17,26,0.1);
+  --shadow-depth3: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
+  --shadow-small: 0 3px 10px rgb(0,0,0,0.2);
+  --shadow-small2: 0px 0px 0px 1px rgb(0 0 0 / 0.06),
+      0px 1px 1px -0.5px rgb(0 0 0 / 0.06),
+      0px 3px 3px -1.5px rgb(0 0 0 / 0.06), 
+      0px 6px 6px -3px rgb(0 0 0 / 0.06),
+      0px 12px 12px -6px rgb(0 0 0 / 0.06),
+      0px 24px 24px -12px rgb(0 0 0 / 0.06);
+}
+
+
+@theme inline {
+
+  --color-darkblack: var(--darkblack);
+  --color-lightblack: var(--lightblack);
+   --color-main: var(--main);
+  --color-bg: var(--background);
+   --color-text: var(--foreground);
+    --color-neon: var(--neon);
+      --color-prpl: var(--prpl);
+  --color-blk: var(--blk);
+  --color-wht: var(--wht);
+  --shadow-brand: var(--shadow-brand);
+  --shadow-border: var(--shadow-border);
+  --shadow-depth: var(--shadow-depth);
+  --shadow-depth2: var(--shadow-depth2);
+  --shadow-depth3: var(--shadow-depth3);
+  --shadow-small: var(--shadow-small);
+  --shadow-small2: var(--shadow-small2); 
+
+}
+
+
+
+@font-face {
+  font-family: "FK Screamer";
+  font-weight: 300;
+  src: url("./assets/fonts/fk-screamer.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 200;
+  src: url("./assets/fonts/pp-editorial-new-thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 300;
+  src: url("./assets/fonts/pp-editorial-new-ultralight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 500;
+  src: url("./assets/fonts/pp-editorial-new-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 700;
+  src: url("./assets/fonts/pp-editorial-new-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 800;
+  src: url("./assets/fonts/pp-editorial-new-heavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "obv";
+  font-weight: 800;
+  src: url("./assets/fonts/obv.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'signature';
+  font-weight: 100;
+  src: url('./assets/fonts/signature.otf') format('opentype');
+}
+
