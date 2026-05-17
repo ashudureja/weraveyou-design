@@ -132,7 +132,7 @@ export default function Landing() {
               </h1>
 
               <p
-                className="mt-10 whitespace-pre-line text-[5.5vw] font-light leading-[1.25] tracking-[-0.03em] text-white sm:text-[3vw] lg:text-[2.5vw] 2xl:text-[51px]"
+                className="mt-10 whitespace-pre-line text-[5.5vw] font-light leading-[1.25] tracking-[-0.03em] text-white sm:text-[3vw] lg:text-[2.5vw] "
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 4,
