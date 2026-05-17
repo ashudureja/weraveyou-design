@@ -39,15 +39,15 @@ const newsPosts = [
 
 export default function NewsFeaturedSection() {
   return (
-    <section className="w-full bg-[#f5f5f5]  px-4 py-8 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:px-6 lg:px-8">
+    <section className="w-full bg-[#f5f5f5]  px-4 py-12 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:px-6 lg:px-8 lg:py-16">
       <div className="mx-auto max-w-8xl">
         {/* Header */}
         <div className="mb-9 flex items-center justify-between">
-          <h2 className="text-[36px]  leading-none tracking-[-0.04em] text-[#262626] sm:text-[44px]">
+          <h2 className="text-[7vw]  leading-none tracking-[-0.04em] text-[#262626] sm:text-[44px]">
             News &amp; Featured
           </h2>
 
-          <button className="text-[16px] font-medium text-black underline underline-offset-4">
+          <button className="text-[4vw] sm:text-[16px] font-medium text-black underline underline-offset-4">
             View All
           </button>
         </div>
