@@ -39,8 +39,8 @@ const newsPosts = [
 
 export default function NewsFeaturedSection() {
   return (
-    <section className="w-full  px-4 py-8 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1960px]">
+    <section className="w-full bg-[#f5f5f5]  px-4 py-8 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-8xl">
         {/* Header */}
         <div className="mb-9 flex items-center justify-between">
           <h2 className="text-[36px]  leading-none tracking-[-0.04em] text-[#262626] sm:text-[44px]">
@@ -55,7 +55,7 @@ export default function NewsFeaturedSection() {
         {/* Cards */}
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {newsPosts.map((post, index) => (
-            <article key={index} className="group  bg-[#f5f5f5] rounded-[18px] cursor-pointer">
+            <article key={index} className="group  bg-white rounded-[18px] cursor-pointer">
               {/* Image */}
               <div className="relative h-[260px] overflow-hidden rounded-[18px] bg-white sm:h-[300px] lg:h-[350px]">
                 <img

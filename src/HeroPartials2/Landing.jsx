@@ -118,9 +118,9 @@ export default function Landing() {
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14 lg:px-[90px] lg:py-[110px]">
-            <div key={activeHero} className="hero-slide-content max-w-[980px]">
+            <div key={activeHero} className="hero-slide-content max-w-6xl">
               <h1
-                className="whitespace-pre-line text-[10vw] font-medium leading-[0.9] tracking-[-0.02em] text-white sm:text-[6.5vw] lg:text-[7vw] 2xl:text-[158px]"
+                className="whitespace-pre-line text-[10vw] font-medium leading-[0.9] tracking-[-0.02em] text-white sm:text-[6.5vw] lg:text-[7vw] "
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 3,
