@@ -132,7 +132,7 @@ export default function Landing() {
               </h1>
 
               <p
-                className="mt-10 whitespace-pre-line text-[5.5vw] font-light leading-[1.25] tracking-[-0.03em] text-white sm:text-[3vw] lg:text-[2.5vw] "
+                className="mt-10 whitespace-pre-line text-[5.5vw] font-light leading-[1.25] tracking-[-0.01em] text-white sm:text-[3vw] lg:text-[2.5vw] "
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 4,
@@ -185,7 +185,7 @@ export default function Landing() {
 
             <div className="px-5 py-5">
               <h3
-                className=" text-[20px] font-light leading-[1.01] pb-[3px] tracking-[-0.025em] text-[#2f2f2f] sm:text-[22px] lg:text-[24px]"
+                className=" text-[20px]  leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[24px]"
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 2,
@@ -196,16 +196,16 @@ export default function Landing() {
                 {featuredPost.title}
               </h3>
 
-              <p className="mt-4 text-[15px] font-light leading-[1.08] tracking-[-0.025em] text-black/80">
+              <p className="mt-4  text-[15px] lg:text-[16px]  leading-[1.08]  text-black font-light">
                 {featuredPost.description}
               </p>
 
               <div className="mt-5 flex items-center justify-between gap-5 ">
-                <button className="text-[14px] font-light text-black underline underline-offset-4">
+                <button className="text-[14px]  text-black underline underline-offset-4">
                   Read More
                 </button>
 
-                <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-[#2f2f2f]">
+                <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
                   <span>By {heroPosts[0].author}</span>
                   <span>{heroPosts[0].date}</span>
                 </div>
@@ -227,8 +227,8 @@ export default function Landing() {
 
               <div className="flex flex-col justify-between px-5 py-5">
                 <div>
-                  <h3
-                    className=" text-[20px] font-light leading-[1.01] pb-[3px] tracking-[-0.025em] text-[#2f2f2f] sm:text-[22px] lg:text-[24px]"
+                  <h5
+                    className=" text-[20px] leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[20px]"
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
@@ -237,19 +237,19 @@ export default function Landing() {
                     }}
                   >
                     {featuredPost.title}
-                  </h3>
+                  </h5>
 
-                  <p className="mt-4 text-[15px] leading-[1.08] tracking-[-0.025em] text-[#565656] lg:hidden">
+                  <p className="mt-4 text-[15px] leading-[1.08] tracking-[-0.015em] text-[#565656] lg:hidden">
                     {post.description}
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between gap-5 ">
-                  <button className="text-[14px] font-light text-black underline underline-offset-4">
+                  <button className="text-[14px] lg:text-[12px]  text-black underline underline-offset-4">
                     Read More
                   </button>
 
-                  <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-[#2f2f2f]">
+                  <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
                     <span>By {heroPosts[0].author}</span>
                     <span>{heroPosts[0].date}</span>
                   </div>

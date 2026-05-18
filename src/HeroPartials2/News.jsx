@@ -43,11 +43,11 @@ export default function NewsFeaturedSection() {
       <div className="mx-auto max-w-8xl">
         {/* Header */}
         <div className="mb-9 flex items-center justify-between">
-          <h2 className="text-[7vw]  leading-none tracking-[-0.04em] text-[#262626] sm:text-[44px]">
+          <h2 className="text-[28px]  leading-none tracking-[-0.04em] text-black sm:text-[44px]">
             News &amp; Featured
           </h2>
 
-          <button className="text-[4vw] sm:text-[16px] font-medium text-black underline underline-offset-4">
+          <button className="text-[14px] sm:text-[16px] font-medium text-black underline underline-offset-4">
             View All
           </button>
         </div>
@@ -77,7 +77,7 @@ export default function NewsFeaturedSection() {
 
               {/* Title */}
                <h3
-                className="mt-5 px-5 text-[20px]  leading-[1.01] pb-[3px] tracking-[-0.025em] text-[#2f2f2f] sm:text-[22px] lg:text-[24px]"
+                className="mt-5 px-5 text-[20px]  leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[24px]"
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 2,
@@ -93,7 +93,7 @@ export default function NewsFeaturedSection() {
                 {post.category}
                 </button>
 
-                <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-[#2f2f2f]">
+                <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
                    <span>By {post.author}</span>
                   <span>{post.date}</span>
                  
