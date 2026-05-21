@@ -72,7 +72,7 @@ export default function Landing() {
   const heroPost = heroPosts[activeHero];
 
   return (
-    <section className="min-h-screen w-full bg-white p-4 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:p-6 lg:p-8">
+    <section className=" w-full bg-white p-4 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:p-6 lg:p-8">
       <style>
         {`
           @keyframes heroFadeUp {
@@ -105,7 +105,7 @@ export default function Landing() {
         `}
       </style>
 
-      <div className="mx-auto grid max-w-8xl gap-5 lg:h-[925px] lg:grid-cols-[75%_25%]">
+      <div className="mx-auto grid max-w-500 gap-5  lg:grid-cols-[71%_29%] 2xl:grid-cols-[75%_25%] ">
         {/* Left Hero */}
         <article className="relative h-[640px] overflow-hidden rounded-[18px] lg:h-full">
           <img
@@ -117,10 +117,10 @@ export default function Landing() {
 
           <div className="absolute inset-0 bg-black/50" />
 
-          <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14 lg:px-[90px] lg:py-[110px]">
-            <div key={activeHero} className="hero-slide-content max-w-6xl">
+          <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14  lg:px-16 2xl:px-20 ">
+            <div key={activeHero} className="hero-slide-content absolute top-1/2   max-w-[85%] 2xl:max-w-[80%] -translate-y-1/2">
               <h1
-                className="whitespace-pre-line text-[10vw] font-medium leading-[0.9] tracking-[-0.02em] text-white sm:text-[6.5vw] lg:text-[7vw] "
+                className="whitespace-pre-line text-[6.5vw] font-medium leading-[0.98] tracking-[-0.02em] text-white sm:text-[4.5vw] lg:text-[60px] 2xl:text-[85px] "
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 3,
@@ -131,7 +131,7 @@ export default function Landing() {
                 {heroPost.title}
               </h1>
 
-              <p
+              {/* <p
                 className="mt-10 whitespace-pre-line text-[5.5vw] font-light leading-[1.25] tracking-[-0.01em] text-white sm:text-[3vw] lg:text-[2.5vw] "
                 style={{
                   display: "-webkit-box",
@@ -141,26 +141,26 @@ export default function Landing() {
                 }}
               >
                 {heroPost.description}
-              </p>
+              </p> */}
 
-              <div className="mt-8 flex max-w-[760px] items-center justify-between gap-5">
-                <button className="text-[14px] font-light text-white underline underline-offset-4">
+              <div className="mt-8 flex sm:max-w-[88%]   items-center justify-between gap-5">
+                <button className=" text-[12px] sm:text-[14px] 2xl:text-[16px] font-light text-white underline underline-offset-4">
                   Read More
                 </button>
 
-                <div className="flex items-center gap-6 text-[14px] font-light italic leading-none text-white/90">
+                <div className="flex items-center gap-6 text-[13px] sm:text-[14px] 2xl:text-[16px] font-light italic leading-none text-white/90">
                   <span>By {heroPost.author}</span>
                   <span>{heroPost.date}</span>
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3 absolute bottom-15">
               {heroPosts.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveHero(index)}
-                  className={`flex h-8 w-8 items-center justify-center rounded-full text-[13px] font-light transition-all duration-300 ${
+                  className={`flex h-6 w-6 sm:h-8 sm:w-8 2xl:h-10 2xl:w-10 items-center justify-center rounded-full text-[13px] font-light transition-all duration-300 ${
                     activeHero === index
                       ? "bg-red-600 text-white"
                       : "bg-white/15 text-white hover:bg-white/25"
@@ -185,7 +185,7 @@ export default function Landing() {
 
             <div className="px-5 py-5">
               <h3
-                className=" text-[20px]  leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[24px]"
+                className=" text-[20px]  leading-[1.01] pb-[3px] tracking-[-0.03em] text-black sm:text-[22px] lg:text-[24px] 2xl:text-[27px]"
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 2,
@@ -227,8 +227,8 @@ export default function Landing() {
 
               <div className="flex flex-col justify-between px-5 py-5">
                 <div>
-                  <h5
-                    className=" text-[20px] leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[20px]"
+                  <h3
+                    className=" text-[20px] leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[20px] lg:text-[20px] "
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
@@ -237,7 +237,7 @@ export default function Landing() {
                     }}
                   >
                     {featuredPost.title}
-                  </h5>
+                  </h3>
 
                   <p className="mt-4 text-[15px] leading-[1.08] tracking-[-0.015em] text-[#565656] lg:hidden">
                     {post.description}

@@ -39,15 +39,15 @@ const newsPosts = [
 
 export default function NewsFeaturedSection() {
   return (
-    <section className="w-full bg-[#f5f5f5]  px-4 py-12 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:px-6 lg:px-8 lg:py-16">
-      <div className="mx-auto max-w-8xl">
+    <section className="w-full bg-white px-4 pt-12 pb-[60px] sm:pb-[70px] lg:pb-[80px] 2xl:pb-[90px]  [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:px-6 lg:px-8 lg:pt-16 2xl:px-12">
+      <div className="mx-auto max-w-[2000px]">
         {/* Header */}
         <div className="mb-9 flex items-center justify-between">
-          <h2 className="text-[28px]  leading-none tracking-[-0.04em] text-black sm:text-[44px]">
+          <h2 className="text-[28px] leading-none tracking-[-0.04em] text-black sm:text-[36px] lg:text-[44px] 2xl:text-[50px]">
             News &amp; Featured
           </h2>
 
-          <button className="text-[14px] sm:text-[16px] font-medium text-black underline underline-offset-4">
+          <button className="text-[14px] font-medium text-black underline underline-offset-4 sm:text-[16px]">
             View All
           </button>
         </div>
@@ -55,9 +55,12 @@ export default function NewsFeaturedSection() {
         {/* Cards */}
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {newsPosts.map((post, index) => (
-            <article key={index} className="group  bg-white rounded-[18px] cursor-pointer">
+            <article
+              key={index}
+              className="group cursor-pointer rounded-[18px] bg-[#f5f5f5]"
+            >
               {/* Image */}
-              <div className="relative h-[260px] overflow-hidden rounded-[18px] bg-white sm:h-[300px] lg:h-[350px]">
+              <div className="relative h-[260px] overflow-hidden rounded-[18px] bg-white sm:h-[300px] lg:h-[350px] 2xl:h-[400px]">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -72,12 +75,9 @@ export default function NewsFeaturedSection() {
                 </div>
               </div>
 
-              {/* Meta */}
-              
-
               {/* Title */}
-               <h3
-                className="mt-5 px-5 text-[20px]  leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[24px]"
+              <h3
+                className="mt-5 px-5 pb-[3px] text-[20px] leading-[1.01] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[23px] 2xl:text-[25px]"
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 2,
@@ -88,19 +88,33 @@ export default function NewsFeaturedSection() {
                 {post.title}
               </h3>
 
-             <div className="mt-5 flex items-center justify-between gap-5 px-5 pb-5">
-                <button className="text-[14px]  text-black underline underline-offset-4">
-                {post.category}
+              <div className="mt-5 flex items-center justify-between gap-5 px-5 pb-5">
+                <button className="text-[12px] text-black underline underline-offset-4 2xl:text-[14px]">
+                  {post.category}
                 </button>
 
-                <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
-                   <span>By {post.author}</span>
+                <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black 2xl:text-[14px]">
+                  <span>By {post.author}</span>
                   <span>{post.date}</span>
-                 
                 </div>
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Bottom ad space */}
+        <div className="mt-[60px] sm:mt-[70px] lg:mt-[80px] 2xl:mt-[90px] grid gap-4 lg:grid-cols-[1fr_0.54fr]">
+          <div className="flex h-[160px] sm:h-[170px] lg:h-[180px] 2xl:h-[190px] items-center justify-center rounded-[30px] bg-[#f5f5f5]">
+            <span className="text-[11px]  uppercase tracking-[0.55em] text-black">
+              Ad Space
+            </span>
+          </div>
+
+          <div className="flex h-[160px] sm:h-[170px] lg:h-[180px] 2xl:h-[190px] items-center justify-center rounded-[30px] bg-[#f5f5f5]">
+            <span className="text-[11px]  uppercase tracking-[0.55em] text-black">
+              Ad Space
+            </span>
+          </div>
         </div>
       </div>
     </section>
