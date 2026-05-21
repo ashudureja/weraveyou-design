@@ -32,7 +32,7 @@ export default function LatestVideosSection() {
   return (
     <section
       className="
-        w-full overflow-hidden bg-[#f5f5f5] px-4 py-10
+        w-full overflow-hidden  
         [--video-card-w:300px]
         [--side-card-x:118px]
         [--video-area-h:270px]
@@ -41,17 +41,17 @@ export default function LatestVideosSection() {
         min-[375px]:[--side-card-x:132px]
         min-[375px]:[--video-area-h:300px]
 
-        sm:px-6
+       
         sm:[--video-card-w:560px]
         sm:[--side-card-x:220px]
         sm:[--video-area-h:450px]
 
-        md:py-16
+       
         md:[--video-card-w:650px]
         md:[--side-card-x:255px]
         md:[--video-area-h:500px]
 
-        lg:px-8 lg:py-20
+       
         lg:[--video-card-w:820px]
         lg:[--side-card-x:320px]
         lg:[--video-area-h:600px]
@@ -68,7 +68,7 @@ export default function LatestVideosSection() {
         fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
       }}
     >
-      <div className="mx-auto w-full max-w-[1960px]">
+      <div className="mx-auto px-4 py-10   sm:px-6  md:py-16  lg:px-8 lg:py-20 w-full max-w-[2000px] bg-[#f5f5f5]">
         <h2
           className="
             text-center font-black uppercase leading-[0.85] tracking-[-0.065em] text-black
@@ -78,6 +78,7 @@ export default function LatestVideosSection() {
             lg:text-[120px]
             xl:text-[165px]
             2xl:text-[190px]
+            mb-4
           "
         >
           Latest Videos
@@ -85,8 +86,8 @@ export default function LatestVideosSection() {
 
         <ThreeDCarousel items={videos} />
 
-        <div className="mt-6 flex justify-center sm:mt-8 md:mt-10">
-          <button className="rounded-[10px] bg-[#ED1C35] px-6 py-3 text-[13px] font-medium text-white transition hover:opacity-90 sm:rounded-[12px] sm:text-[14px]">
+        <div className="flex justify-center ">
+          <button className="rounded-[10px] cursor-pointer bg-[#ED1C35] px-6 py-3 text-[13px] font-medium text-white transition hover:opacity-90 sm:rounded-[12px] sm:text-[14px]">
             View All Videos
           </button>
         </div>
@@ -179,7 +180,7 @@ const ThreeDCarousel = ({
     <section
       id="ThreeDCarousel"
       className=" min-w-full mx-auto 
-    flex items-center justify-center"
+    flex items-center  justify-center mb-4 xl:mb-6"
     >
       <div
         className="w-full px-4 sm:px-6 lg:px-8 
@@ -247,7 +248,7 @@ const ThreeDCarousel = ({
 
                   {index === active && (
                     <h3
-                      className="mt-5 px-5 pb-[3px] text-[20px] leading-[1.01] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[23px] 2xl:text-[25px]"
+                      className="mt-5 px-5 pb-[1px] text-[15px] tracking-[-0.025em] text-black sm:text-[22px] lg:text-[23px] 2xl:text-[25px]"
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 1,
@@ -266,21 +267,21 @@ const ThreeDCarousel = ({
           {!isMobile && (
             <>
               <button
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center text-gray-500 hover:bg-white z-30 shadow-md transition-all hover:scale-110"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 rounded-full flex items-center justify-center  hover:bg-black z-30 shadow-xl cursor-pointer transition-all hover:scale-105"
                 onClick={() =>
                   setActive((prev) => (prev - 1 + items.length) % items.length)
                 }
                 aria-label="Previous"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-5 h-5 text-white" />
               </button>
 
               <button
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center text-gray-500 hover:bg-white z-30 shadow-md transition-all hover:scale-110"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 rounded-full flex items-center justify-center  hover:bg-black z-30 shadow-xl cursor-pointer transition-all hover:scale-105"
                 onClick={() => setActive((prev) => (prev + 1) % items.length)}
                 aria-label="Next"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5 text-white" />
               </button>
             </>
           )}

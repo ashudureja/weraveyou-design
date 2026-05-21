@@ -168,15 +168,15 @@ export default function TechFeaturedSection() {
         </div>
 
         {/* Right ad space */}
-        <aside className="h-full  flex lg:flex-col gap-3 lg:gap-5 lg:pt-[76px]">
+        <aside className="h-full  flex flex-col gap-3 lg:gap-5 lg:pt-[76px]">
           <div className="grid h-[160px] sm:h-[170px] xl:h-[45%] w-full place-items-center rounded-[18px] lg:rounded-[30px] bg-[#d9ddde]">
-            <span className="text-[11px] font-semibold tracking-[0.6em] text-black/70">
+            <span className="text-[11px]  tracking-[0.6em] text-black/70">
               AD SPACE
             </span>
           </div>
 
           <div className="grid h-[160px] sm:h-[170px] xl:h-[55%] w-full place-items-center rounded-[18px] bg-[#d9ddde] lg:rounded-[30px]">
-            <span className="text-[11px] font-semibold tracking-[0.6em] text-black/70">
+            <span className="text-[11px]  tracking-[0.6em] text-black/70">
               AD SPACE
             </span>
           </div>
