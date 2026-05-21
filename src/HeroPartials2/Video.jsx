@@ -99,7 +99,7 @@ export default function LatestVideosSection() {
 const ThreeDCarousel = ({
   items = videos,
   autoRotate = true,
-  rotateInterval = 4000,
+  rotateInterval = 3000,
   isMobileSwipe = true,
 }) => {
   const [active, setActive] = useState(0);
@@ -180,10 +180,10 @@ const ThreeDCarousel = ({
     <section
       id="ThreeDCarousel"
       className=" min-w-full mx-auto 
-    flex items-center  justify-center mb-4 xl:mb-6"
+    flex items-center  justify-center "
     >
       <div
-        className="w-full px-4 sm:px-6 lg:px-8 
+        className="w-full 
       min-w-[350px] max-w-[1600px]"
       >
         <div
@@ -267,26 +267,26 @@ const ThreeDCarousel = ({
           {!isMobile && (
             <>
               <button
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 rounded-full flex items-center justify-center  hover:bg-black z-30 shadow-xl cursor-pointer transition-all hover:scale-105"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center  hover:bg-white/90 z-30 shadow-xl cursor-pointer transition-all hover:scale-105"
                 onClick={() =>
                   setActive((prev) => (prev - 1 + items.length) % items.length)
                 }
                 aria-label="Previous"
               >
-                <ChevronLeft className="w-5 h-5 text-white" />
+                <ChevronLeft className="w-5 h-5 " />
               </button>
 
               <button
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/90 rounded-full flex items-center justify-center  hover:bg-black z-30 shadow-xl cursor-pointer transition-all hover:scale-105"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center  hover:bg-white/90 z-30 shadow-xl cursor-pointer transition-all hover:scale-105"
                 onClick={() => setActive((prev) => (prev + 1) % items.length)}
                 aria-label="Next"
               >
-                <ChevronRight className="w-5 h-5 text-white" />
+                <ChevronRight className="w-5 h-5 " />
               </button>
             </>
           )}
 
-          <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center space-x-3 z-30">
+          {/* <div className="absolute bottom-0 left-0 right-0 flex justify-center items-center space-x-3 z-30">
             {items.map((_, idx) => (
               <button
                 key={idx}
@@ -299,7 +299,7 @@ const ThreeDCarousel = ({
                 aria-label={`Go to item ${idx + 1}`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
