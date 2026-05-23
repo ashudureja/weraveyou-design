@@ -61,9 +61,14 @@ export default function TechFeaturedSection() {
         {/* Left section */}
         <div>
           {/* Header */}
-          <div className="mb-8 flex items-center justify-between sm:mb-9 lg:mb-[38px]">
-            <h2 className="text-[28px] leading-none tracking-[-0.04em] text-white sm:text-[44px]">
-              Tech Featured
+          <div className="mb-8 flex  items-center justify-between sm:mb-9 lg:mb-[38px]">
+            <h2 className="text-[28px] hidden sm:flex  leading-none tracking-[-0.04em] text-white sm:text-[44px]">
+              Latest in music technology
+
+            </h2>
+            <h2 className="text-[28px] flex md:hidden leading-none tracking-[-0.04em] text-white sm:text-[44px]">
+              Latest in music <br/> technology
+
             </h2>
 
             <button className="text-[16px] font-light text-white underline underline-offset-4">

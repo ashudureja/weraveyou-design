@@ -120,7 +120,7 @@ export default function Landing() {
           <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14  lg:px-16 2xl:px-20 ">
             <div key={activeHero} className="hero-slide-content absolute top-1/2   max-w-[85%] 2xl:max-w-[80%] -translate-y-1/2">
               <h1
-                className="whitespace-pre-line text-[6.5vw] font-medium leading-[0.98] tracking-[-0.02em] text-white sm:text-[4.5vw] lg:text-[60px] 2xl:text-[85px] "
+                className="whitespace-pre-line text-[6.5vw] font-medium leading-[0.98] tracking-[-0.02em] text-white sm:text-[4.5vw] lg:text-[50px] xl:text-[60px] 2xl:text-[85px] "
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 3,
@@ -174,90 +174,87 @@ export default function Landing() {
         </article>
 
         {/* Right Column */}
-        <aside className="grid gap-5 lg:h-full lg:grid-rows-[1fr_170px_170px]">
-          {/* Featured Big Card */}
-          <article className="overflow-hidden rounded-[18px] bg-[#f5f5f5] lg:h-full">
-            <img
-              src={featuredPost.image}
-              alt={featuredPost.title}
-              className="h-[335px] w-full rounded-[18px] object-cover object-center lg:h-[320px]"
-            />
+       {/* Right Column */}
+<aside className="grid gap-5 lg:h-full lg:grid-rows-[1fr_170px_170px]">
+  {/* Featured Big Card - visible on all screens */}
+  <article className="overflow-hidden rounded-[18px] bg-[#f5f5f5] lg:h-full">
+    <img
+      src={featuredPost.image}
+      alt={featuredPost.title}
+      className="h-[335px] w-full rounded-[18px] object-cover object-center lg:h-[320px]"
+    />
 
-            <div className="px-5 py-5">
-              <h3
-                className=" text-[20px]  leading-[1.01] pb-[3px] tracking-[-0.03em] text-black sm:text-[22px] lg:text-[24px] 2xl:text-[27px]"
-                style={{
-                  display: "-webkit-box",
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
-                }}
-              >
-                {featuredPost.title}
-              </h3>
+    <div className="px-5 py-5">
+      <h3
+        className="text-[20px] leading-[1.01] pb-[3px] tracking-[-0.03em] text-black sm:text-[22px] lg:text-[24px] 2xl:text-[27px]"
+        style={{
+          display: "-webkit-box",
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
+        }}
+      >
+        {featuredPost.title}
+      </h3>
 
-              <p className="mt-4  text-[15px] lg:text-[16px]  leading-[1.08]  text-black font-light">
-                {featuredPost.description}
-              </p>
+      <p className="mt-4 text-[15px] lg:text-[16px] leading-[1.08] text-black font-light">
+        {featuredPost.description}
+      </p>
 
-              <div className="mt-5 flex items-center justify-between gap-5 ">
-                <button className="text-[14px]  text-black underline underline-offset-4">
-                  Read More
-                </button>
+      <div className="mt-5 flex items-center justify-between gap-5">
+        <button className="text-[14px] text-black underline underline-offset-4">
+          Read More
+        </button>
 
-                <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
-                  <span>By {heroPosts[0].author}</span>
-                  <span>{heroPosts[0].date}</span>
-                </div>
-              </div>
-            </div>
-          </article>
+        <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
+          <span>By {heroPosts[0].author}</span>
+          <span>{heroPosts[0].date}</span>
+        </div>
+      </div>
+    </div>
+  </article>
 
-          {/* Small Cards: big card style on mobile/tablet, compact on desktop */}
-          {sidePosts.map((post, index) => (
-            <article
-              key={index}
-              className="overflow-hidden rounded-[18px] bg-[#f5f5f5] lg:grid lg:h-[170px] lg:grid-cols-[120px_1fr]"
-            >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="h-[335px] w-full rounded-[18px] object-cover object-center lg:h-full lg:min-h-[170px] lg:rounded-none"
-              />
+  {/* Small Cards - hidden below lg, visible from lg and above */}
+  {sidePosts.map((post, index) => (
+    <article
+      key={index}
+      className="hidden overflow-hidden rounded-[18px] bg-[#f5f5f5] lg:grid lg:h-[170px] lg:grid-cols-[120px_1fr]"
+    >
+      <img
+        src={post.image}
+        alt={post.title}
+        className="h-full min-h-[170px] w-full rounded-none object-cover object-center"
+      />
 
-              <div className="flex flex-col justify-between px-5 py-5">
-                <div>
-                  <h3
-                    className=" text-[20px] leading-[1.01] pb-[3px] tracking-[-0.025em] text-black sm:text-[20px] lg:text-[20px] "
-                    style={{
-                      display: "-webkit-box",
-                      WebkitLineClamp: 2,
-                      WebkitBoxOrient: "vertical",
-                      overflow: "hidden",
-                    }}
-                  >
-                    {featuredPost.title}
-                  </h3>
+      <div className="flex flex-col justify-between px-5 py-5">
+        <div>
+          <h3
+            className="text-[20px] leading-[1.01] pb-[3px] tracking-[-0.025em] text-black lg:text-[20px]"
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+            }}
+          >
+            {post.title}
+          </h3>
+        </div>
 
-                  <p className="mt-4 text-[15px] leading-[1.08] tracking-[-0.015em] text-[#565656] lg:hidden">
-                    {post.description}
-                  </p>
-                </div>
+        <div className="flex items-center justify-between gap-5">
+          <button className="text-[12px] text-black underline underline-offset-4">
+            Read More
+          </button>
 
-                <div className="flex items-center justify-between gap-5 ">
-                  <button className="text-[14px] lg:text-[12px]  text-black underline underline-offset-4">
-                    Read More
-                  </button>
-
-                  <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
-                    <span>By {heroPosts[0].author}</span>
-                    <span>{heroPosts[0].date}</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
-        </aside>
+          <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black">
+            <span>By {heroPosts[0].author}</span>
+            <span>{heroPosts[0].date}</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  ))}
+</aside>
       </div>
     </section>
   );

@@ -72,8 +72,8 @@ export default function NewsletterSocialSection() {
       }}
     >
       {/* Newsletter */}
-      <div className="mx-auto grid max-w-[1960px] gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1fr_1fr] md:items-start lg:px-16 lg:pt-28 ">
-        <h2 className="max-w-[720px]  text-[40px] font-light leading-[1.08]  text-white sm:text-[48px] lg:text-[68px] ">
+      <div className="mx-auto grid max-w-[2000px] gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1fr_1fr] md:items-start lg:px-8 lg:py-16 2xl:py-18">
+        <h2 className="max-w-[720px]  text-[32px] font-light leading-[1.08]  text-white md:text-[44px] xl:text-[60px] 2xl:text-[65px] ">
           Subscribe To Our
          
           Newsletter To Stay
@@ -82,19 +82,19 @@ export default function NewsletterSocialSection() {
         </h2>
 
         <form
-          className="flex w-full flex-col pt-2 md:pt-4 lg:pt-6"
+          className="flex w-full flex-col "
           onSubmit={(e) => e.preventDefault()}
         >
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full border-0 border-b border-white/40 bg-transparent px-0 py-4 text-[22px] font-light text-white outline-none placeholder:text-white/70 focus:border-white sm:text-[26px]"
+            className="w-full border-0 border-b border-white/40 bg-transparent px-0 py-4 text-[22px] font-light text-white outline-none placeholder:text-white/70 focus:border-white md:text-[24px] xl:text-[28px] 2xl:text-[30px]"
           />
 
           <input
             type="email"
             placeholder="Your Email"
-            className="mt-2 w-full border-0 border-b border-white/40 bg-transparent px-0 py-4 text-[22px] font-light text-white outline-none placeholder:text-white/70 focus:border-white sm:text-[26px]"
+            className="mt-2 w-full border-0 border-b border-white/40 bg-transparent px-0 py-4 text-[22px] font-light text-white outline-none placeholder:text-white/70 focus:border-white md:text-[24px] xl:text-[28px] 2xl:text-[30px]"
           />
 
           <div className="mt-12 flex justify-start md:justify-end">
@@ -109,7 +109,7 @@ export default function NewsletterSocialSection() {
       </div>
 
       {/* Social Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+      <div className="grid mx-auto grid max-w-[2000px] grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
         {socialPosts.map((post, index) => (
           <article
             key={index}
@@ -124,7 +124,7 @@ export default function NewsletterSocialSection() {
             <div className="absolute inset-0 bg-black/25" />
 
             <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-              <h3 className="text-[22px] font-black uppercase leading-[0.85] tracking-[-0.06em] text-white sm:text-[26px] lg:text-[28px]">
+              <h3 className="text-[22px] font-black uppercase leading-[0.85] tracking-[-0.06em] text-white md:text-[28px]">
                 {post.title}
               </h3>
 

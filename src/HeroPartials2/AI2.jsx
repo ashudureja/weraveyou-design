@@ -1,50 +1,46 @@
+
+
 import React from "react";
 
 const newsPosts = [
   {
     image:
-      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=90",
-    category: "Category",
-    date: "27 MARCH 2026",
-    author: "KAAMIN",
-    title: "Ultra Miami 2026 weather forecast: latest update",
+      "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?auto=format&fit=crop&w=900&q=90",
+    date: "27 March 2026",
+    author: "Kaamin",
+    title: "Spotify is now showing AI credits in song info",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=90",
-    category: "Category",
-    date: "27 MARCH 2026",
-    author: "KAAMIN",
-    title:
-      "Chicane celebrates 30 years with orchestral show at Royal Festival Hall",
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=900&q=90",
+    date: "27 March 2026",
+    author: "Kaamin",
+    title: "Splice Sounds is now available inside Claude via MCP",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=90",
-    category: "Category",
-    date: "27 MARCH 2026",
-    author: "KAAMIN",
-    title: "Fatboy Slim celebrates 40 years with huge extended Coachella set",
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=90",
+    date: "27 March 2026",
+    author: "Kaamin",
+    title: "iZotope releases RX 12 with new AI-powered audio repair & source separation tools",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=90",
-    category: "Category",
-    date: "27 MARCH 2026",
-    author: "KAAMIN",
-    title:
-      "Armin van Buuren talks AI, trance revival and DJ culture with Apple Music",
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=90",
+    date: "27 March 2026",
+    author: "Kaamin",
+    title: "I tried Suno as an electronic music producer and I’m not sure how to feel about it",
   },
 ];
 
-export default function NewsFeaturedSection() {
+export default function Ai() {
   return (
-    <section className="w-full bg-white px-4 pt-12 pb-[60px] sm:pb-[70px] lg:pb-[80px] 2xl:pb-[90px]  [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif] sm:px-6 lg:px-8 lg:pt-16 2xl:px-12">
+    <section className="w-full bg-[#f5f5f5] px-4 py-12 sm:px-6 lg:px-8 xl:py-14  [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif]  ">
       <div className="mx-auto max-w-[2000px]">
         {/* Header */}
         <div className="mb-9 flex items-center justify-between">
           <h2 className="text-[28px] leading-none tracking-[-0.04em] text-black sm:text-[36px] lg:text-[44px] 2xl:text-[50px]">
-            News &amp; Featured
+           AI In Music
           </h2>
 
           <button className="text-[14px] font-medium text-black underline underline-offset-4 sm:text-[16px]">
@@ -57,7 +53,7 @@ export default function NewsFeaturedSection() {
           {newsPosts.map((post, index) => (
             <article
               key={index}
-              className="group cursor-pointer rounded-[18px] bg-[#f5f5f5]"
+              className="group cursor-pointer rounded-[18px] bg-white"
             >
               {/* Image */}
               <div className="relative h-[260px] overflow-hidden rounded-[18px] bg-white sm:h-[300px] lg:h-[350px] 2xl:h-[400px]">
@@ -90,7 +86,7 @@ export default function NewsFeaturedSection() {
 
               <div className="mt-5 flex items-center justify-between gap-5 px-5 pb-5">
                 <button className="text-[12px] text-black underline underline-offset-4 2xl:text-[14px]">
-                  {post.category}
+                  Read More
                 </button>
 
                 <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-black 2xl:text-[14px]">
@@ -102,20 +98,7 @@ export default function NewsFeaturedSection() {
           ))}
         </div>
 
-        {/* Bottom ad space */}
-        <div className="mt-[60px] sm:mt-[70px] lg:mt-[80px] 2xl:mt-[90px] grid gap-4 lg:grid-cols-[1fr_0.54fr]">
-          <div className="flex h-[160px] sm:h-[170px] lg:h-[180px] 2xl:h-[190px] items-center justify-center rounded-[30px] bg-gray-100">
-            <span className="text-[11px]  uppercase tracking-[0.55em] text-black">
-              Ad Space
-            </span>
-          </div>
-
-          <div className="flex h-[160px] sm:h-[170px] lg:h-[180px] 2xl:h-[190px] items-center justify-center rounded-[30px] bg-gray-100">
-            <span className="text-[11px]  uppercase tracking-[0.55em] text-black">
-              Ad Space
-            </span>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

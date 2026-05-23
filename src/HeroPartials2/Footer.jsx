@@ -50,7 +50,7 @@ export default function Footer() {
         fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
       }}
     >
-      <div className="mx-auto max-w-[1960px] px-4 pt-16 sm:px-6 lg:px-8 lg:pt-20">
+      <div className="mx-auto max-w-[1960px] px-4 pt-16 sm:px-6 lg:px-8 lg:py-16 2xl:py-18">
         {/* Top Row */}
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
           {/* Logo */}
@@ -98,13 +98,13 @@ export default function Footer() {
               <input
                 type="text"
                 placeholder="Write Us"
-                className="w-full border-0 border-b border-white/35 bg-transparent py-4 text-[24px] font-light text-white outline-none placeholder:text-white/55 focus:border-white sm:text-[28px]"
+                className="w-full border-0 border-b border-white/35 bg-transparent py-4 text-[22px] font-light text-white outline-none placeholder:text-white/55 focus:border-white  md:text-[24px] xl:text-[28px] 2xl:text-[30px]"
               />
 
               <input
                 type="email"
                 placeholder="Email Address"
-                className="mt-4 w-full border-0 border-b border-white/35 bg-transparent py-4 text-[24px] font-light text-white outline-none placeholder:text-white/55 focus:border-white sm:text-[28px]"
+                className="mt-4 w-full border-0 border-b border-white/35 bg-transparent py-4 text-[22px] font-light text-white outline-none placeholder:text-white/55 focus:border-white md:text-[24px] xl:text-[28px] 2xl:text-[30px]"
               />
             </form>
           </div>

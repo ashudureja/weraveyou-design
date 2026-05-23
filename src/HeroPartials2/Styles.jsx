@@ -89,13 +89,13 @@ export default function MusicStylesSection() {
 
   return (
     <section
-      className="w-full overflow-hidden bg-black px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
+      className="w-full overflow-hidden bg-black px-4 py-14 sm:px-6 lg:px-8 lg:py-20 mx-auto max-w-[2000px]"
       style={{
         fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
       }}
     >
-      <div className="mx-auto max-w-[1960px]">
-        <h2 className="mb-10 text-[24px] font-normal leading-none tracking-[-0.03em] text-white sm:text-[28px] lg:mb-12">
+      <div className="">
+        <h2 className="mb-10 text-[28px] leading-none tracking-[-0.04em] text-white sm:text-[36px] lg:text-[40px] xl:text-[44px] 2xl:text-[50px] lg:mb-12">
           Music Styles
         </h2>
 
@@ -132,13 +132,33 @@ export default function MusicStylesSection() {
 function MusicStyleItem({ title, number, image, imagePosition = "right" }) {
   return (
     <div className="group relative flex cursor-pointer items-center justify-between gap-8">
-      <h3 className="text-[30px] font-normal leading-none tracking-[-0.045em] text-white transition  group-hover:text-white/70 sm:text-[34px] lg:text-[36px]">
-        <span className="inline-block border-b border-white/70 leading-[0.95] transition  group-hover:border-white/70">
-          {title}
-        </span>
-      </h3>
+      <h3 className="text-[30px] font-normal leading-none tracking-[-0.045em] text-white transition group-hover:text-white sm:text-[34px] lg:text-[36px] 2xl:text-[40px]">
+  <span
+    className="
+      relative inline-block leading-[0.95]
 
-      <span className="shrink-0 text-[18px] font-normal leading-none tracking-[-0.03em] text-white transition  group-hover:text-white/70 sm:text-[20px]">
+      before:absolute before:left-0 before:-bottom-[5px]
+      before:h-[6px] before:w-full before:origin-left before:scale-x-0
+      before:bg-white/25 before:blur-md before:content-['']
+      before:transition-transform before:duration-700
+      before:ease-[cubic-bezier(0.22,1,0.36,1)]
+
+      after:absolute after:left-0 after:-bottom-[2px]
+      after:h-[1px] after:w-full after:origin-left after:scale-x-0
+      after:bg-white
+      after:content-['']
+      after:transition-transform after:duration-700
+      after:ease-[cubic-bezier(0.22,1,0.36,1)]
+
+      group-hover:before:scale-x-100
+      group-hover:after:scale-x-100
+    "
+  >
+    {title}
+  </span>
+</h3>
+
+      <span className="shrink-0 text-[18px] font-normal leading-none tracking-[-0.03em] text-white/90 transition  group-hover:text-white sm:text-[20px]">
         {number}
       </span>
 

@@ -13,6 +13,7 @@ import LatestEventsSection from './HeroPartials2/Events';
 import MagazineSection from './HeroPartials2/Magazine';
 import NewsletterSocialSection from './HeroPartials2/NewsLetter';
 import Footer from './HeroPartials2/Footer';
+import Ai from './HeroPartials2/AI2';
 
 const locomotiveScroll = new LocomotiveScroll();
 
@@ -26,7 +27,8 @@ const App = () => {
   <TechFeaturedSection/>
 <LatestVideosSection/>
 <MusicStylesSection/>
-<AI/>
+<Ai/>
+
 <LatestEventsSection/>
 <MagazineSection/>
 <NewsletterSocialSection/>
