@@ -84,55 +84,9 @@ const sideNewsPosts = [
   },
 ];
 
-const topics = [
-  "Tech Editors Pick",
-  "Plugins",
-  "Sample Packs",
-  "Courses",
-  "Guides",
-  "Gear",
-];
+const topics = ["Tech Editors Pick", "Plugins", "Sample Packs", "Courses","Guides","Gear"];
 
-const TechSmallCard = ({ post }) => {
-  return (
-    <article className="group cursor-pointer rounded-[18px] bg-[#211f21] lg:flex lg:h-[150px] 2xl:h-[170px]">
-      <div className="relative h-[260px] overflow-hidden rounded-[18px] bg-[#211f21] sm:h-[300px] lg:h-full lg:w-[40%]">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="h-full w-full object-cover object-center transition duration-700 ease-out group-hover:scale-105"
-        />
-      </div>
-
-      <div className="flex flex-1 flex-col lg:justify-between lg:px-4 lg:py-5">
-        <h3
-          className="mt-5 px-5 text-[20px] leading-[1.01] tracking-[-0.025em] text-white sm:text-[22px] lg:mt-0 lg:px-0 lg:text-[17px]"
-          style={{
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {post.title}
-        </h3>
-
-        <div className="mt-5 flex items-center justify-between gap-5 px-5 pb-5 lg:mt-0 lg:px-0 lg:pb-0">
-          <button className="text-[12px] text-white underline underline-offset-4 lg:hidden 2xl:block 2xl:text-[14px]">
-            {post.category || "Read More"}
-          </button>
-
-          <div className="flex items-center gap-6 text-[12px] font-light italic leading-none text-white/90 2xl:text-[14px]">
-            <span>{post.date}</span>
-            <span>By {post.author}</span>
-          </div>
-        </div>
-      </div>
-    </article>
-  );
-};
-
-const NewsDesktopCard = ({ post }) => {
+const SmallPostCard = ({ post }) => {
   return (
     <article className="group flex h-full cursor-pointer overflow-hidden rounded-[18px] bg-[#211f21]">
       <div className="h-[150px] w-[38%] min-w-[120px] overflow-hidden rounded-[18px] bg-[#211f21] sm:h-[170px] lg:h-[150px] 2xl:h-[170px]">
@@ -176,7 +130,7 @@ const NewsDesktopCard = ({ post }) => {
 
 const NewsRail = ({ title = "News", posts = [] }) => {
   return (
-    <aside className="flex h-full flex-col gap-5 xl:border-l xl:border-white/15 xl:pl-7 2xl:pl-12">
+    <aside className="flex h-full flex-col gap-5 xl:border-l xl:border-white/15 xl:pl-7 2xl:pl-12 ">
       <div className="flex items-center justify-between">
         <h3 className="text-[28px] leading-none tracking-[-0.04em] text-white sm:text-[34px] lg:text-[38px]">
           {title}
@@ -204,17 +158,9 @@ const NewsRail = ({ title = "News", posts = [] }) => {
         ))}
       </div>
 
-      {/* Less than lg: use same small cards as the left section */}
-      <div className="grid gap-[18px] md:grid-cols-2 lg:hidden">
+      <div className="grid gap-[18px] sm:grid-cols-2 xl:grid-cols-1">
         {posts.map((post, index) => (
-          <TechSmallCard key={index} post={post} />
-        ))}
-      </div>
-
-      {/* lg and above: keep current News cards exactly */}
-      <div className="hidden gap-[18px] lg:grid">
-        {posts.map((post, index) => (
-          <NewsDesktopCard key={index} post={post} />
+          <SmallPostCard key={index} post={post} />
         ))}
       </div>
     </aside>
@@ -301,16 +247,16 @@ export default function TechFeaturedSection() {
               </article>
             </div>
 
-            {/* Left small cards */}
+            {/* Same small cards */}
             <div className="grid gap-[18px] md:grid-cols-2 lg:grid-cols-1">
               {techPosts.map((post, index) => (
-                <TechSmallCard key={index} post={post} />
+                <SmallPostCard key={index} post={post} />
               ))}
             </div>
           </div>
         </div>
 
-        {/* Right news section */}
+        {/* Right news section instead of ads */}
         <NewsRail title="News" posts={sideNewsPosts} />
       </div>
     </section>

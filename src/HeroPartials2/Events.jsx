@@ -128,7 +128,7 @@ export default function LatestEventsSection() {
 function EventCard({ event }) {
   return (
     <article className="cursor-pointer select-none">
-      <div className="h-[260px] overflow-hidden rounded-[18px] bg-white  lg:h-[280px]  xl:h-[325px] 2xl:h-[350px] ">
+      <div className="h-[260px] overflow-hidden rounded-[18px] bg-white  lg:h-[290px]  xl:h-[330px] 2xl:h-[355px] ">
         <img
           src={event.image}
           alt={event.title}

@@ -1,5 +1,3 @@
-
-
 import React from "react";
 
 const newsPosts = [
@@ -22,25 +20,39 @@ const newsPosts = [
       "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=90",
     date: "27 March 2026",
     author: "Kaamin",
-    title: "iZotope releases RX 12 with new AI-powered audio repair & source separation tools",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=90",
-    date: "27 March 2026",
-    author: "Kaamin",
-    title: "I tried Suno as an electronic music producer and I’m not sure how to feel about it",
+    title:
+      "iZotope releases RX 12 with new AI-powered audio repair & source separation tools",
   },
 ];
 
+const AdCard = () => {
+  return (
+    <article className="group flex h-[160px] md:min-h-full items-center justify-center text-center cursor-pointer flex-col overflow-hidden rounded-[30px] md:rounded-[18px] bg-[#e4e4e4]">
+     
+      
+
+     
+          <span className="text-[11px] font-medium uppercase tracking-[0.55em] text-black/45">
+            Ad Space
+          </span>
+
+         
+
+      
+
+      
+    </article>
+  );
+};
+
 export default function Ai() {
   return (
-    <section className="w-full bg-[#f5f5f5] px-4 py-12 sm:px-6 lg:px-8 xl:py-14  [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif]  ">
+    <section className="w-full bg-[#f5f5f5] px-4 py-12 sm:px-6 lg:px-8 xl:py-14 [font-family:'Helvetica_Neue',Helvetica,Arial,sans-serif]">
       <div className="mx-auto max-w-[2000px]">
         {/* Header */}
         <div className="mb-9 flex items-center justify-between">
           <h2 className="text-[28px] leading-none tracking-[-0.04em] text-black sm:text-[36px] lg:text-[44px] 2xl:text-[50px]">
-           AI In Music
+            AI In Music
           </h2>
 
           <button className="text-[14px] font-medium text-black underline underline-offset-4 sm:text-[16px]">
@@ -96,9 +108,9 @@ export default function Ai() {
               </div>
             </article>
           ))}
-        </div>
 
-       
+          <AdCard />
+        </div>
       </div>
     </section>
   );
