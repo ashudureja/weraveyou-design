@@ -99,7 +99,7 @@ export default function LatestVideosSection() {
 const ThreeDCarousel = ({
   items = videos,
   autoRotate = true,
-  rotateInterval = 3000,
+  rotateInterval = 4000,
   isMobileSwipe = true,
 }) => {
   const [active, setActive] = useState(0);
