@@ -89,12 +89,12 @@ export default function MusicStylesSection() {
 
   return (
     <section
-      className="w-full overflow-hidden bg-black px-4 py-14 sm:px-6 lg:px-8 lg:py-20 mx-auto max-w-[2000px]"
+      className="w-full overflow-hidden bg-black px-4 py-14 sm:px-6 lg:px-8 lg:py-20 "
       style={{
         fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
       }}
     >
-      <div className="">
+      <div className="mx-auto max-w-[2000px]">
         <h2 className="mb-10 text-[28px] leading-none tracking-[-0.04em] text-white sm:text-[36px] lg:text-[40px] xl:text-[44px] 2xl:text-[50px] lg:mb-12">
           Music Styles
         </h2>

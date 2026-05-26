@@ -52,12 +52,12 @@ const techPosts = [
 export default function TechFeaturedSection() {
   return (
     <section
-      className="mx-auto w-full max-w-[2000px] bg-black px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
+      className="mx-auto w-full  bg-black px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
       style={{
         fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
       }}
     >
-      <div className="grid gap-10 xl:grid-cols-[minmax(0,1fr)_385px]  lg:gap-8">
+      <div className="grid gap-10 max-w-[2000px] mx-auto xl:grid-cols-[minmax(0,1fr)_385px]  lg:gap-8">
         {/* Left section */}
         <div>
           {/* Header */}

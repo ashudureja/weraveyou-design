@@ -31,7 +31,7 @@ const videos = [
 export default function LatestVideosSection() {
   return (
     <section
-      className="
+      className="bg-[#f5f5f5]
         w-full overflow-hidden  
         [--video-card-w:300px]
         [--side-card-x:118px]
@@ -68,7 +68,7 @@ export default function LatestVideosSection() {
         fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
       }}
     >
-      <div className="mx-auto px-4 py-10   sm:px-6  md:py-16  lg:px-8 lg:py-20 w-full max-w-[2000px] bg-[#f5f5f5]">
+      <div className="mx-auto px-4 py-10   sm:px-6  md:py-16  lg:px-8 lg:py-20 w-full max-w-[2000px] ">
         <h2
           className="
             text-center font-black uppercase leading-[0.85] tracking-[-0.065em] text-black

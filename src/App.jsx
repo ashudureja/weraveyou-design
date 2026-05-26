@@ -14,6 +14,7 @@ import MagazineSection from './HeroPartials2/Magazine';
 import NewsletterSocialSection from './HeroPartials2/NewsLetter';
 import Footer from './HeroPartials2/Footer';
 import Ai from './HeroPartials2/AI2';
+import WeRaveYouNavbar from './HeroPartials2/Navbar';
 
 const locomotiveScroll = new LocomotiveScroll();
 
@@ -21,6 +22,7 @@ const locomotiveScroll = new LocomotiveScroll();
 const App = () => {
   return (
     <>
+    <WeRaveYouNavbar/>
 
   <Landing/>
   <NewsFeaturedSection/>

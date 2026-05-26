@@ -88,7 +88,7 @@ export default function Landing() {
 
           @keyframes heroImageZoom {
             0% {
-              transform: scale(1.04);
+              transform: scale(1.06);
             }
             100% {
               transform: scale(1);
@@ -118,9 +118,9 @@ export default function Landing() {
           <div className="absolute inset-0 bg-black/50" />
 
           <div className="relative z-10 flex h-full flex-col justify-between px-8 py-10 sm:px-14  lg:px-16 2xl:px-20 ">
-            <div key={activeHero} className="hero-slide-content absolute top-1/2   max-w-[85%] 2xl:max-w-[80%] -translate-y-1/2">
+            <div key={activeHero} className="hero-slide-content absolute mt-10 top-1/2   max-w-[85%] 2xl:max-w-[80%] -translate-y-1/2">
               <h1
-                className="whitespace-pre-line text-[6.5vw] font-medium leading-[0.98] tracking-[-0.02em] text-white sm:text-[4.5vw] lg:text-[50px] xl:text-[60px] 2xl:text-[85px] "
+                className="whitespace-pre-line pb-[2px] md:pb-[6px] xl:pb-[6px] 2xl:pb-[8px] text-[6.5vw] font-medium leading-[0.98] tracking-[-0.02em] text-white sm:text-[4.5vw] lg:text-[50px] xl:text-[60px] 2xl:text-[85px] "
                 style={{
                   display: "-webkit-box",
                   WebkitLineClamp: 3,
